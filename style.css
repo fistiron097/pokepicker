@@ -1,0 +1,287 @@
+body {
+    margin: 0;
+    background-image: url(abstract.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: 220%;
+    font-family: Arial, sans-serif;
+    padding-top: 100px; /* Same as navbar height */
+}
+
+.container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Ensures navbar stays above other content */
+    /* Your existing styles */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #161616B3;
+    backdrop-filter: blur(5px);
+    padding: 1rem;
+    box-sizing: border-box;
+}   
+#logo{
+    height:40px;
+    width: 40px;
+    vertical-align: center;
+}
+
+
+.left a{
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    font-family: "Nosifer", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    padding: 0 5px;
+    margin: 0 12px;
+    gap: 15px;
+
+}
+
+.right{
+    font-size: 1.5rem;
+    padding-right: 10px;
+}
+.drop-down {
+    position: absolute;
+    right: 1rem;
+    top: 60px;
+    width: 300px;
+    background: rgba(30, 30, 30, 0.95); /* Dark semi-transparent background */
+    backdrop-filter: blur(20px);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: none;
+    z-index: 1000;
+    transition: all 0.3s ease;
+    text-align: center;
+  }
+  
+  .drop-down.open {
+    display: block;
+    animation: fadeIn 0.3s ease;
+  }
+  
+  .drop-down li {
+    padding: 0.9rem 1.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #f5f5f5;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+   
+  }
+  
+  .drop-down li:first-child {
+    background: rgba(255, 255, 255, 0.05);
+    font-weight: 500;
+    color: #fff;
+  }
+  
+  .drop-down li:last-child {
+    border-bottom: none;
+  }
+  
+  .drop-down li:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateX(3px);
+  }
+  
+  .drop-down a {
+    text-decoration: none;
+    color: #f5f5f5;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .drop-down a:hover {
+    color: #ffcc00; /* Pokemon-style yellow */
+  }
+  
+  /* Social icons */
+  .drop-down a[href*="twitter"]::before {
+    content: "🐦";
+    margin-right: 8px;
+  }
+  
+  .drop-down a[href*="github"]::before {
+    content: "💻";
+    margin-right: 8px;
+  }
+  
+  .drop-down a[href*="linkedin"]::before {
+    content: "🔗";
+    margin-right: 8px;
+  }
+  
+  .drop-down a[href*="resume"]::before {
+    content: "📄";
+    margin-right: 8px;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+.main-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+label {
+    font-family: sans-serif;
+    font-size: 1rem;
+    padding-right: 10px
+}
+  
+select {
+    font-size: 0.9rem;
+    padding: 2px 5px;
+}
+
+.description p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: aqua; 
+    font-size: 1.2rem;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.pokemon-type{
+    height: 50px;
+    width: 150px;
+    border-radius: 10px;
+    border: none;
+    padding: 0 12px;
+    background-color: #f0f0f0;
+}
+.pet-select{
+    height: 50px;
+    width: 150px;
+    border-radius: 8px;
+    border: none;
+    padding: 0 12px;
+    background-color: #f0f0f0;
+}
+
+.fetch-pokemon {
+    display: flex;               
+    align-items: center;        
+    gap: 8px;
+    height: 50px;
+    width: 150px;
+    border-radius: 10px;
+    padding: 0 12px;
+    cursor: pointer;
+    border: none;                /* Optional: removes button border */
+    background-color: #f0f0f0;   /* Optional: just makes it visible */
+    
+}
+
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24
+}
+
+.input-elements{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.display-section {  /* Add the missing dot */
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-color: #0e0e11;
+    padding: 4rem;
+    margin: 200px 0px 0px 0px;
+}
+
+.result-card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    
+}   
+
+/* Style for individual Pokemon cards */
+.pokemon-card {
+    border: 11px solid rgb(75, 85, 99);
+    padding: 10px;
+    margin: 10px;
+    border-radius: 1rem;
+    width: 253px;
+    background-color: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    color: orange;
+}
+
+.pokemon-card img {
+    width: 96px;
+    height: 96px;
+    background-color: #f0f0f0;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.pokemon-card p {
+    color: #F5F5F5;
+    margin: 5px 0;
+    
+}
+
+.footer-section{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 0.875rem;
+    color: rgb(100, 100, 142);
+    background-color: rgb(20, 20, 27);
+    padding:2rem;
+    border-width: 1px 0px 0px;
+    border-style: solid;
+    border-color: rgba(38, 4, 4, 0.11);
+    gap: 3rem;
+}
+
+.made-by{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+.made-by img{
+    height: 40px;
+    width: 40px;
+}
